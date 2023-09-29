@@ -36,8 +36,8 @@ body {
 
 /* ************** CONTAINER (START) ************** */
 .container {
-    width: 600px;
-    height: 450px;
+    width: 640px;
+    height: 480px;
     background-color: var(--white);
     border-radius: 20px 20px 150px;
     padding: 40px;
@@ -50,6 +50,7 @@ body {
 }
 
 .container .header .input-div {
+    height: 80px;
     display: flex;
     flex-direction: column;
     row-gap: 5px;
@@ -64,6 +65,12 @@ body {
     color: var(--off-black);
     font-weight: 700;
     font-size: 28px;
+}
+
+.container .header .input-div input::-webkit-inner-spin-button,
+.container .header .input-div input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 .container .header .input-div input::placeholder {
