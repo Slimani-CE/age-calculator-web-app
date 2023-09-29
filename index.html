@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,800;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Age calculator app</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="header">
+      <div class="input-div">
+        <label for="day-input">day</label>
+        <input type="text" id="day-input" value="24" placeholder="dd">
+        <span class="error" id="error-msg">This field is required</span>
+      </div>
+
+      <div class="input-div">
+        <label for="month-input">month</label>
+        <input type="text" id="month-input" value="09" placeholder="mm">
+        <span class="error" id="error-msg">This field is required</span>
+      </div>
+
+      <div class="input-div">
+        <label for="year-input">year</label>
+        <input type="text" id="year-input" value="1984" placeholder="yyyy">
+        <span class="error" id="error-msg">This field is required</span>
+      </div>
+    </div>
+    <div class="middle-line">
+      <div class="svg" onclick="calculate()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44">
+          <g fill="none" stroke="#FFF" stroke-width="2">
+            <path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44" />
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="result-div">
+      <h1 class="year"><span id="year-result">38</span>years</h1>
+      <h1 class="month"><span id="month-result">3</span>months</h1>
+      <h1 class="day"><span id="day-result">26</span>days</h1>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

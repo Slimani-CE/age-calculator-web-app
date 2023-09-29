@@ -1,0 +1,154 @@
+/* ************** VARIABLES (START) ************** */
+:root {
+    /* Primary */
+    --purple: hsl(259, 100%, 65%);
+    --light-red: hsl(0, 100%, 67%);
+
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --off-white: hsl(0, 0%, 94%);
+    --light-grey: hsl(0, 0%, 86%);
+    --smokey-grey: hsl(0, 1%, 44%);
+    --off-black: hsl(0, 0%, 8%);
+}
+/* ************** VARIABLES (END) ************** */
+
+
+/* ************** GENERAL CSS (START) ************** */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--off-white);
+}
+/* ************** GENERAL CSS (END) ************** */
+
+
+/* ************** CONTAINER (START) ************** */
+.container {
+    width: 600px;
+    height: 450px;
+    background-color: var(--white);
+    border-radius: 20px 20px 150px;
+    padding: 40px;
+}
+
+.container .header {
+    width: 100%;
+    display: flex;
+    column-gap: 25px;
+}
+
+.container .header .input-div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.container .header .input-div input {
+    width: 120px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid var(--light-grey);
+    padding: 15px;
+    color: var(--off-black);
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.container .header .input-div input::placeholder {
+    color: var(--light-grey);
+    text-transform: uppercase;
+}
+
+.container .header .input-div input:focus {
+    outline: none;
+    border: 1px solid var(--purple);
+}
+
+.container .header .input-div label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--smokey-grey);
+    text-transform: uppercase;
+}
+
+.container .header .input-div span.error {
+    font-size: 10px;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--light-red);
+    display: none;
+} 
+
+.container .header .input-div.error span.error {
+    display: block;
+}
+
+.container .header .input-div.error label {
+    color: var(--light-red);
+}
+
+.container .header .input-div.error input {
+    border: 1px solid var(--light-red);
+}
+
+.container .middle-line {
+    width: 100%;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+}
+
+.container .middle-line::before {
+    height: 2px;
+    background-color: var(--light-grey);
+    content: '';
+    flex: 1;
+}
+
+.container .middle-line .svg {
+    background-color: var(--purple);
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container .middle-line .svg:hover{
+    background-color: var(--off-black);
+}
+
+.container .middle-line .svg svg {
+    width: 40px;
+}
+
+.container .result-div {
+    width: 100%;
+}
+
+.container .result-div h1 {
+    font-size: 60px;
+    font-weight: bold;
+    font-style: italic;
+    color: var(--off-black);
+}
+
+.container .result-div h1 span {
+    color: var(--purple);
+}
+/* ************** CONTAINER (END) ************** */
